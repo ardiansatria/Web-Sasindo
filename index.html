@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Studi Sastra Indonesia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdf6f0;
+    }
+
+    header {
+      background: #8b0000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #b22222;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background: #a52a2a;
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    footer {
+      background: #8b0000;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 800px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Program Studi Sastra Indonesia</h1>
+    <p>Fakultas Bahasa dan Seni - Universitas Negeri Surabaya</p>
+  </header>
+
+  <nav>
+    <button onclick="openTab('profil')">Profil</button>
+    <button onclick="openTab('visi')">Visi & Misi</button>
+    <button onclick="openTab('kurikulum')">Kurikulum</button>
+    <button onclick="openTab('kontak')">Kontak</button>
+  </nav>
+
+  <section id="profil" class="active">
+    <div class="card">
+      <h2>Profil</h2>
+      <p>Program Studi Sastra Indonesia bertujuan untuk mencetak lulusan yang memiliki pemahaman mendalam mengenai bahasa, sastra, dan budaya Indonesia. Mahasiswa dibekali dengan kemampuan analisis teks, penelitian, serta keterampilan berbahasa yang kuat, baik lisan maupun tulisan.</p>
+    </div>
+  </section>
+
+  <section id="visi">
+    <div class="card">
+      <h2>Visi</h2>
+      <p>Menjadi program studi unggul dalam kajian bahasa, sastra, dan budaya Indonesia di tingkat nasional maupun internasional.</p>
+      <h2>Misi</h2>
+      <ul>
+        <li>Menyelenggarakan pendidikan berkualitas di bidang sastra Indonesia.</li>
+        <li>Melakukan penelitian yang berkontribusi pada pengembangan ilmu sastra dan bahasa.</li>
+        <li>Melaksanakan pengabdian kepada masyarakat berbasis ilmu sastra Indonesia.</li>
+        <li>Menjalin kerja sama akademik dengan berbagai institusi.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kurikulum">
+    <div class="card">
+      <h2>Kurikulum</h2>
+      <p>Kurikulum Program Studi Sastra Indonesia meliputi:</p>
+      <ul>
+        <li>Kajian Linguistik: Fonologi, Morfologi, Sintaksis, Semantik, dan Pragmatik.</li>
+        <li>Kajian Sastra: Teori Sastra, Kritik Sastra, Sastra Nusantara, Sastra Modern, dan Sastra Bandingan.</li>
+        <li>Penelitian dan Metodologi: Metode Penelitian Bahasa dan Sastra, Penulisan Karya Ilmiah.</li>
+        <li>Keterampilan Bahasa: Menulis Kreatif, Penyuntingan, dan Retorika.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="card">
+      <h2>Kontak</h2>
+      <p><strong>Program S1 Sastra Indonesia</strong></p>
+      <p>Fakultas Bahasa dan Seni, Universitas Negeri Surabaya</p>
+      <p><strong>Nomor:</strong> 088290915230</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Program Studi Sastra Indonesia - Universitas Negeri Surabaya</p>
+  </footer>
+
+  <script>
+    function openTab(tabId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
+      document.getElementById(tabId).classList.add("active");
+    }
+  </script>
+</body>
+</html>
+
